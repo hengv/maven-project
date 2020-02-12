@@ -13,7 +13,7 @@ pipline {
     }
     stage('Deploy'){
       steps {
-        echo "Code deployd.'
+        echo "Code deployd..."
       }
     }
   }
