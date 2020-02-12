@@ -30,7 +30,7 @@ stages{
                     steps {
                         sh "id"
                         sh "ls -l /var/lib/jenkins/"
-                        sh 'ssh -i /var/lib/jenkins/private.key hengwei@${params.tomcat_dev}  "id"'
+                        sh 'ssh -i /var/lib/jenkins/private.key hengwei@jenkins.weiheng.ink  "id"'
                         sh "scp -i /var/lib/jenkins/private.key **/target/*.war hengwei@jenkins.weiheng.ink:/var/lib/tomcat7/webapps"
                     }
                 }
@@ -39,7 +39,7 @@ stages{
                     steps {
                         sh "id"
                         sh "ls -l /var/lib/jenkins/"
-                        sh 'ssh -i /var/lib/jenkins/private.key hengwei@${params.tomcat_prod}  "id"'
+                        sh 'ssh -i /var/lib/jenkins/private.key hengwei@tomcat.weiheng.ink  "id"'
                         sh "scp -i /var/lib/jenkins/private.key **/target/*.war hengwei@tomcat.weiheng.ink:/var/lib/tomcat7/webapps"
                     }
                 }
