@@ -32,7 +32,7 @@ stages{
                         sh "cat /etc/hostname"
                         sh "ls -l /var/lib/jenkins/"
                         sh 'ssh -i /var/lib/jenkins/private.key hengwei@jenkins.weiheng.ink  "id"'
-                        sh "scp -i /var/lib/jenkins/private.key **/target/*.war hengwei@jenkins.weiheng.ink:/opt/tomcat7/webapps"
+                        sh "scp -i /var/lib/jenkins/private.key **/target/*.war hengwei@jenkins.weiheng.ink:/opt/tomcat/latest/webapps/"
                     }
                 }
 
@@ -42,7 +42,7 @@ stages{
                         sh "cat /etc/hostname"
                         sh "ls -l /var/lib/jenkins/"
                         sh 'ssh -i /var/lib/jenkins/private.key hengwei@tomcat.weiheng.ink  "id"'
-                        sh "scp -i /var/lib/jenkins/private.key **/target/*.war hengwei@tomcat.weiheng.ink:/opt/tomcat7/webapps"
+                        sh "scp -i /var/lib/jenkins/private.key **/target/*.war hengwei@tomcat.weiheng.ink:/opt/tomcat/latest/webapps"
                     }
                 }
             }
